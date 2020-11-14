@@ -1,0 +1,28 @@
+/* Your styles should be mobile-first and responsive */
+form {
+  display: flex;
+  flex-flow: column;
+  margin: 0 auto;
+  border: solid 1px grey;
+  text-align: center;
+  width: 80%;
+  font-size: 20px;
+  height: 500px;
+
+}
+
+.options {
+  margin: 25px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/** 
+  * If you are unclear on how to utilize a mobile-first, responsive technique to write your CSS, here is an example: 
+  *
+  * https://github.com/andreacardybailey/responsive_example/blob/master/styles/responsive-base.css 
+  *
+*/

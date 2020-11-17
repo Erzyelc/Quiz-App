@@ -32,7 +32,7 @@ const store = {
       answers: [
         'StarWars: The Return of the Jedi',
         'Rogue One: A StarWars Story',
-        'Starwars: The Rise of Skywalker',
+        'StarWars: The Rise of Skywalker',
         'Starwars: Attack of the Clones'
       ],
       correctAnswer: 'StarWars: The Rise of Skywalker'
@@ -52,7 +52,7 @@ const store = {
       answers: [
         'StarWars: The Empire Strikes Back',
         'Solo: A StarWars Story',
-        'Starwars: Attack of the Clones',
+        'StarWars: Attack of the Clones',
         'Starwars: The Force Awakens'
       ],
       correctAnswer: 'StarWars: Attack of the Clones'

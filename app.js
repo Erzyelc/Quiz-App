@@ -211,17 +211,36 @@ function render() {
   let html = '';
 
   if (store.quizStarted === false) {
+    console.log('this signifies its false')
     $('main').html(generateHtml());
     return;
   }
-  else if (store.currentQuestion >= 0 && store.currentQuestion < store.questions.length) {
+  /*
+  if (store.quizStarted === true && store.currentQuestion >= 0 && store.currentQuestion < store.questions.length) {
+    console.log('this signifies its true')
     html = generateQuestionScore();
     html += generateQuestionHtml();
     $('main').html(html);
   }
+  */
+  if(store.quizStarted === true){
+    console.log('this is true')
+    console.log(store.currentQuestion);
+    if (store.currentQuestion >= 0 && store.currentQuestion < store.questions.length) {
+      html = generateQuestionScore();
+      html += generateQuestionHtml();
+      $('main').html(html);
+    }
+    else{
+    $('main').html(generateResultsScreen());
+    }
+  }
+  /*
   else {
+    console.log('This is the other else', store.quizStarted)
     $('main').html(generateResultsScreen());
   }
+  */
 }
 
 
@@ -234,6 +253,7 @@ function render() {
 // These functions handle events (submit, click, etc)
 function handleStartClick() {
   $('main').on('click', '#start', function (event) {
+    store.currentQuestion = 0;
     store.quizStarted = true;
     render();
   });
